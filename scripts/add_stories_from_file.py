@@ -9,7 +9,7 @@ def load_stories(path):
         return json.load(f)
 
 def post_story(address, story):
-    url = f"{address}/worker/stories"
+    url = f"{address}/api/worker/stories"
     response = requests.post(url, json=story)
     return response.status_code, response.text
 
