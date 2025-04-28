@@ -21,13 +21,17 @@ def main():
     stories_file = sys.argv[1]
     address = sys.argv[2]
 
+    if not address.startswith('http://') and not address.startswith('https://'):
+        address = 'http://' + address
+
     stories = load_stories(stories_file)
 
     for idx, story in enumerate(stories, start=1):
         status_code, text = post_story(address, story)
-        print(f"[{idx}/{len(stories)}] POST {address}/api/worker/stories -> Status: {status_code}")
+        print(f"[{idx}/{len(stories)}] POST {address}/worker/stories -> Status: {status_code}")
         if status_code >= 400:
             print(f"Error: {text}")
+
 
 if __name__ == "__main__":
     main()
