@@ -25,7 +25,7 @@ def main():
 
     for idx, story in enumerate(stories, start=1):
         status_code, text = post_story(address, story)
-        print(f"[{idx}/{len(stories)}] POST {address}/worker/stories -> Status: {status_code}")
+        print(f"[{idx}/{len(stories)}] POST {address}/api/worker/stories -> Status: {status_code}")
         if status_code >= 400:
             print(f"Error: {text}")
 
