@@ -4,5 +4,9 @@ version = "1.0"
 
 dependencies = [
     "matplotlib",
-    "werkzeug"
+    "werkzeug",
+    "requests"
 ]
+
+[project.optional-dependencies]
+dev = ["ruff"]
