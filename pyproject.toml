@@ -1,0 +1,8 @@
+[project]
+name = "taranis-ai-scripts"
+version = "1.0"
+
+dependencies = [
+    "matplotlib",
+    "werkzeug"
+]
