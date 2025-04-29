@@ -39,7 +39,7 @@ def main():
 
     headers = {"Content-Type": "application/json", "Authorization": args.auth_header}
 
-    endpoint = f"{args.url.rstrip('/')}/api/worker/connectors"
+    endpoint = f"{args.url.rstrip('/')}/api/config/connectors"
 
     try:
         response = requests.post(endpoint, json=payload, headers=headers)
